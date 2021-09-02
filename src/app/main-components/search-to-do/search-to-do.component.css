@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+input {
+  min-width: 10rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border: 1px solid #293450;
+}
+button {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  background: none;
+  border: 1px solid #293450;
+  color: #293450;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+button:hover,
+button:active {
+  background: #293450;
+  color: white;
+}

@@ -1,0 +1,19 @@
+<div class="add-to-do-main main-div">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <input
+      type="text"
+      placeholder="add your task.."
+      name="ngForm"
+      required
+      [(ngModel)]="textInput.name"
+      [class.field-error]="!ok"
+    />
+    <button type="submit">Add</button>
+  </form>
+</div>
+<app-shadow-pop-up
+  *ngIf="conditiePopup"
+  [conditiePopup]="conditiePopup"
+  [popupText]="'Adauga task si abia dupa apasa Add'"
+  (closePopup)="exitPopup($event)"
+></app-shadow-pop-up>

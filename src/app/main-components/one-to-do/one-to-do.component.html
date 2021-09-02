@@ -1,0 +1,15 @@
+<div class="one-to-do-main">
+  <p [class.done]="task.checked" [class.undone]="!task.checked">
+    {{ task.name }}
+  </p>
+  <div class="done-delete">
+    <p
+      [class.done]="!task.checked"
+      [class.undone]="task.checked"
+      (click)="changeCheck()"
+    >
+      {{ task.checked ? "uncheck" : "check" }}
+    </p>
+    <button (click)="deleteTask()">Delete</button>
+  </div>
+</div>

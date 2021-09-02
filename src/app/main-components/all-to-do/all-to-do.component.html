@@ -1,0 +1,20 @@
+<div class="main-div all-to-do-main">
+  <app-search-to-do
+    [allTasks]="allTasks"
+    (filterTask)="reciveFilterTask($event)"
+  ></app-search-to-do>
+
+  <div class="line"></div>
+
+  <div class="container" *ngIf="allTasks.length">
+    <app-one-to-do
+      *ngFor="let i of allTasks"
+      [task]="i"
+      [allTasks]="allTasks"
+      (emptyTask)="reciveEmptySearch($event)"
+    ></app-one-to-do>
+  </div>
+  <div>
+    <h3 *ngIf="!allTasks.length">Freci menta aiurea..</h3>
+  </div>
+</div>
